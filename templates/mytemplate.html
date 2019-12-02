@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<h1>Deal values</h1>
+	<br>
+
+	<div class="card-group">
+		{% for item in items %}
+		<div class="card">
+		  <img style="width: 200px;">
+		  <div class="card-body">
+		    <h5 class="card-title">{{ item.title }}</h5>
+		    <p class="card-text">{{ item.name }}</p>
+		  </div>
+		</div>
+		{% endfor %}
+	</div>
+	<br>
+	<h1>Deals per month</h1>
+	<br>
+	<div class="card-group">
+		{% for month in quarter1 %}
+		<div class="card">
+			<img style="width: 200px;">
+			<div class="card-body">
+				<h5 class="card-title">{{ month.month }}</h5>
+				<p class="card-text">{{ month.value }}</p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="card-group">
+		{% for month in quarter2 %}
+		<div class="card">
+			<img style="width: 200px;">
+			<div class="card-body">
+				<h5 class="card-title">{{ month.month }}</h5>
+				<p class="card-text">{{ month.value }}</p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="card-group">
+		{% for month in quarter3 %}
+		<div class="card">
+			<img style="width: 200px;">
+			<div class="card-body">
+				<h5 class="card-title">{{ month.month }}</h5>
+				<p class="card-text">{{ month.value }}</p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="card-group">
+		{% for month in quarter4 %}
+		<div class="card">
+			<img style="width: 200px;">
+			<div class="card-body">
+				<h5 class="card-title">{{ month.month }}</h5>
+				<p class="card-text">{{ month.value }}</p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
+	<br>
+{% endblock %}
